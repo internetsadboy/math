@@ -10,13 +10,13 @@
  */
 
 module.exports = function(array, value) {  
-  var startIndex = 0,
-      stopIndex = array.length - 1,
-      middle = Math.floor((startIndex + stopIndex)/2);      
+  var startIndex = 0
+    , stopIndex = array.length - 1
+    , middle = ~~((startIndex + stopIndex)/2);      
   while(array[middle] !== value && startIndex < stopIndex) {
     if(value < array[middle]) stopIndex = middle - 1;
     else if(value > array[middle]) startIndex = middle + 1;
-    middle = Math.floor((startIndex + stopIndex)/2);
+    middle = ~~((startIndex + stopIndex)/2);
   }
   return (array[middle] === value) ? middle : -1;
 }
