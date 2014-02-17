@@ -9,13 +9,13 @@
  */
 
 function BinarySearch(list, startIndex, stopIndex, value) {
-	if(list.length === 0) return 'list empty';
-	if(startIndex > stopIndex) return 'startIndex > stopIndex';
-	if((value < list[startIndex]) || (value > list[stopIndex])) return 'value out of bounds';
-	var middle = ~~((startIndex + stopIndex)/2);
-	if(list[middle] === value) return middle;
-	else if(list[middle] > value) return BinarySearch(list, startIndex, middle - 1, value);
-	else return BinarySearch(list, middle + 1, stopIndex, value);
+  if(list.length === 0) return 'list empty';
+  if(startIndex > stopIndex) return 'startIndex > stopIndex';
+  if((value < list[startIndex]) || (value > list[stopIndex])) return 'value out of bounds';
+  var middle = ~~((startIndex + stopIndex)/2);
+  if(list[middle] === value) return middle;
+  else if(list[middle] > value) return BinarySearch(list, startIndex, middle - 1, value);
+  else return BinarySearch(list, middle + 1, stopIndex, value);
 }
 
 // test
