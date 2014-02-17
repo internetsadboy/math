@@ -20,5 +20,3 @@ module.exports = function(array, value) {
   }
   return (array[middle] === value) ? middle : -1;
 }
-
-
