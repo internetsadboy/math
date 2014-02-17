@@ -13,20 +13,20 @@ exports.median = function(data) {
 }
 
 exports.mode = function(data) {
-	var ram = {}, res = {}, modes = [], max = 0, tempMax = 0;
-	for(var i = 0; i < data.length; i++) {
-		if(ram[data[i]]) ram[data[i]] += 1;
-		else ram[data[i]] = 1;
-	}
-	for(var i in ram) {
-		tempMax = ram[i];
-		if(max < tempMax) max = tempMax;
-	}
-	res.frequency = max;
-	for(var i in ram) if(ram[i] === max) modes.push(i);
-	res.values = modes;
-	if(max === 1) return 'no mode(s) in sample';
-	else return res;
+  var ram = {}, res = {}, modes = [], max = 0, tempMax = 0;
+  for(var i = 0; i < data.length; i++) {
+    if(ram[data[i]]) ram[data[i]] += 1;
+    else ram[data[i]] = 1;
+  }
+  for(var i in ram) {
+    tempMax = ram[i];
+    if(max < tempMax) max = tempMax;
+  }
+  res.frequency = max;
+  for(var i in ram) if(ram[i] === max) modes.push(i);
+  res.values = modes;
+  if(max === 1) return 'no mode(s) in sample';
+  else return res;
 }
 
-//
+
