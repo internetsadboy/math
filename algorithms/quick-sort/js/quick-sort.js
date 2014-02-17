@@ -13,25 +13,20 @@
  */
 
 (function() {
-
-    var QuickSort = function(list) {
-        var size = list.length, left = [], right = [], pivot;
-        if(size === 0) return list;
-        pivot = list[0];
-        for(var i = 1; i < size; i++) {
-          if(list[i] <= pivot) left.push(list[i]);
-	        else right.push(list[i]);
-	      }
-	      left = QuickSort(left);
-	      right = QuickSort(right);
-        return left.concat(pivot,right);
-    };
-	
-    
-    // test       
-    var numbers = [ 11, 78, 23, 4, 2, 86, 100, 29, 19 ];
-    console.log(numbers);
-    console.log(QuickSort(numbers));
-    // output     [ 2, 4, 11, 19, 23, 29, 78, 86, 100 ]
-
+  var QuickSort = function(list) {
+    var size = list.length, left = [], right = [], pivot;
+    if(size === 0) return list;
+    pivot = list[0];
+    for(var i = 1; i < size; i++) {
+      if(list[i] <= pivot) left.push(list[i]);
+      else right.push(list[i]);
+    }
+    left = QuickSort(left);
+    right = QuickSort(right);
+    return left.concat(pivot,right);
+  };
+  // test       
+  var numbers = [ 11, 78, 23, 4, 2, 86, 100, 29, 19 ];
+  console.log(numbers);
+  console.log(QuickSort(numbers));
 }());
