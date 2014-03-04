@@ -28,4 +28,3 @@ exports.mode = function(data) {
   if(max === 1) return 'no mode(s) in sample';
   else return res;
 }
-
