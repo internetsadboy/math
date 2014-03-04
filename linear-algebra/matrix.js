@@ -38,6 +38,7 @@ exports.getCol = function(m, col, print) {
   return result;
 }
 
+// not finished
 exports.scalarMatrixMult = function(m, s, print) {
   if(!s) throw new Error('scalar is undefined');
   var result = [];
