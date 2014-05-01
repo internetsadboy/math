@@ -15,15 +15,19 @@ var h = d[0]+d[1]/n;
 var t = 0;
 
 function poly(x,t) {
-	return x - Math.pow(t,2) + 1;
+  return x - Math.pow(t,2) + 1;
 }
 
 function EulersMethod() {
-	for(var k = 0; k < n; k++) {
-		t = k*h;
-	 	x = h*poly(x,t)+x;
-	} 
-	return x;
+  for(var k = 0; k < n; k++) {
+    t = k*h;
+    x = h*poly(x,t)+x;
+  } 
+  return x;
 }
 
+<<<<<<< HEAD
 console.log(EulersMethod()); // 4.4375
+=======
+EulersMethod(); // 4.4375
+>>>>>>> a5dc3a37c9a875271f663cd24880858dc873e6d7
