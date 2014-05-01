@@ -11,7 +11,7 @@
 var n = 4;
 var d = [0,2];
 var x = 0.5;
-var h = d[0]+d[1]/n; 
+var h = (d[0]+d[1])/n; 
 var t = 0;
 
 function poly(x,t) {
