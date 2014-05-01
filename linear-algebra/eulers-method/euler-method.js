@@ -26,8 +26,4 @@ function EulersMethod() {
   return x;
 }
 
-<<<<<<< HEAD
 console.log(EulersMethod()); // 4.4375
-=======
-EulersMethod(); // 4.4375
->>>>>>> a5dc3a37c9a875271f663cd24880858dc873e6d7
