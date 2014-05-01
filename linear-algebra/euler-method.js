@@ -1,10 +1,13 @@
-// poly: dx/dt == f(t,x)
+// Euler's Method
+// http://en.wikipedia.org/wiki/Euler_method
 // user input: n, d, x, and poly 
+// poly: dx/dt == f(t,x)
 // n: # of steps 
 // d: domain a <= t <= b
 // x: initial value 
 // h: step size
 // t: the delta of current steps taken
+
 var n = 4
 var d = [0,2];
 var x = 0.5;
