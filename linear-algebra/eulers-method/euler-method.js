@@ -8,7 +8,7 @@
 // h: step size
 // t: the delta of current steps taken
 
-var n = 4
+var n = 4;
 var d = [0,2];
 var x = 0.5;
 var h = d[0]+d[1]/n; 
