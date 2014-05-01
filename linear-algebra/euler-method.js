@@ -26,4 +26,4 @@ function EulersMethod() {
   return x;
 }
 
-EulersMethod(); // 4.4375:
+EulersMethod(); // 4.4375
