@@ -22,7 +22,7 @@ exports.dot = function(s, t, print) {
 }
 
 exports.getRow = function(m, r, print) {
-  if(!r) throw new Error('row is undefined');
+  if(!r && r != 0) throw new Error('row is undefined');
   if(!print) return m[r];
   if(print.toLowerCase() === 'print') {
     console.log(m[r]);
@@ -43,4 +43,17 @@ exports.scalarMatrixMult = function(m, s, print) {
   var result = [];
   if(print === 'print') console.log(result);
   return result;
+}
+
+exports.transpose(m) {
+  var result = [];
+  if(!m) throw new Error('m is undefined');
+  var numRows = m.length;
+  var numCols = m[0].length;
+  for(var i = 0; i < numRows; i++) {
+    for(var j = 0; j < numCols; j++) {
+      
+    }
+  }
+
 }
