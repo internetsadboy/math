@@ -70,6 +70,7 @@ PLT.title("rk4 method")
 PLT.plot(t1, x1, 'go-', label='h = 0.2')
 PLT.plot(t2, x2, 'ro-', label='h = 0.1')
 PLT.plot(t3, x3, 'bo-', label='h = 0.05')
+PLT.plot(at1,ax1,'mo-',label='actual')
 
 # euler's method
 PLT.figure(2)
@@ -77,6 +78,7 @@ PLT.title("euler's method")
 PLT.plot(t4, x4, 'go-', label='h = 0.2')
 PLT.plot(t5, x5, 'ro-', label='h = 0.1')
 PLT.plot(t6, x6, 'bo-', label='h = 0.05')
+PLT.plot(at1,ax1,'mo-',label='actual')
 
 # euler's modified method
 PLT.figure(3)
@@ -84,6 +86,7 @@ PLT.title("euler's modified method")
 PLT.plot(t7, x7, 'go-', label='h = 0.2')
 PLT.plot(t8, x8, 'ro-', label='h = 0.1')
 PLT.plot(t9, x9, 'bo-', label='h = 0.05')
+PLT.plot(at1,ax1,'mo-',label='actual')
 
 # h = 0.2, all methods including actual
 PLT.figure(4)
