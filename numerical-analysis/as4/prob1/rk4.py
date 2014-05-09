@@ -9,29 +9,24 @@
 
 from math import *
 
-# collect data points
-T = []
-X = []
-
-def getT():
-	return T
-
-def getX():
-	return X
-
 # dx/dt
 def f(t,x):
 	return t-(2*x)
 
 # do rk4 magic
 def rk4(log,steps):
+	# store data set of (t,x) for k iterations
+	D = []
+	# collect data points (t,x)
+	T = []
+	X = []
 	# initial values
 	n = steps
 	d = [0.0,2.0]
 	h = (d[1]-d[0])/n
-	x = 0.5
+	x = 1.0
 	t = 0.0
-	# lets get loopy
+	# get your popcorn ready
 	for k in range(int(n)):
 		t = k*h
 		T.append(t)
@@ -39,8 +34,11 @@ def rk4(log,steps):
 		k2 = h*f(t+h/2,x+k1/2)
 		k3 = h*f(t+h/2,x+k2/2)
 		k4 = h*f(t+h,x+k3)
-		x = x + (k1 + 2*k2 + 2*k3 + k4)/6  #bread and butter
 		X.append(x)
+		x = x + (k1 + 2*k2 + 2*k3 + k4)/6  # bread and butter
+		if k == n-1:
+			T.append(2.0)
+			X.append(x)
 		if log:
 			print "t  ", t
 			print "k1 ", k1
@@ -49,4 +47,6 @@ def rk4(log,steps):
 			print "k4 ", k4
 			print "x  ", x
 			print ""
-	return x
+	D.append(T)
+	D.append(X)
+	return D

@@ -10,22 +10,17 @@
 
 from math import *
 
-# collect data points
-T = []
-X = []
-
-def getT():
-  return T
-
-def getX():
-  return X
-
 # f(t,x) + f(t+h,x+hf(t,x))
 def poly(h,x,t):
   return 4*h*x - 2*h*t - 4*x + 2*t + h
 
 # euler mod stuff
 def EulersModified(log,steps):
+  # store data points (t,x) for k iterations
+  D = []
+  # collect data points (t,x)
+  T = []
+  X = []
   # initial values
   n = steps
   d = [0.0,2.0]
@@ -41,9 +36,14 @@ def EulersModified(log,steps):
       print "t                 ", t
       print "x(k)              ", x
       print "h/2f(h,t(k),x(k)) ", h/2*poly(h,x,t)
-    x = x+h/2*poly(h,x,t)  # butter
     X.append(x)
+    x = x+h/2*poly(h,x,t)  # butter
+    if k == n-1:
+      T.append(2.0)
+      X.append(x)
     if log:
       print "x(k+1)            ", x 
       print ""
-  return x
+  D.append(T)
+  D.append(X)
+  return D
