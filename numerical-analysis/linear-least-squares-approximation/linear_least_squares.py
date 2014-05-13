@@ -17,7 +17,7 @@ def leastSquares(n,R):
     x2 += k*k
     xy += k*R[k-1]
     k+=1
-  # compute a0, a1 in order to compute P(xi)
+  # compute a0, a1 in order to compute P(xi) in E
   a = a0(x,x2,y,xy,n)
   b = a1(x,x2,y,xy,n)
   return E(a,b,n,R)
