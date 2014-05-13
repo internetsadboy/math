@@ -44,8 +44,6 @@ def E(a0,a1,n,R):
   return [E,X,Y]
 
 # initial values
-# range
-# size of collection
-r = [1.3,3.5,4.2,5.0,7.0,8.8,10.1,12.5,13.0,15.6]
-n = 10
-print leastSquares(n,r) # error, {(xi,yi)} from i = 1 to n
+r = [1.3,3.5,4.2,5.0,7.0,8.8,10.1,12.5,13.0,15.6]  # range
+n = 10                                             # size of collection
+print leastSquares(n,r)                            # error, {(xi,yi)} from i = 1 to n
