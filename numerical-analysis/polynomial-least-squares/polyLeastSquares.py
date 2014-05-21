@@ -20,13 +20,14 @@ def polyLeastSquares(n,X,Y):
   a = np.array(polynomials)
   b = np.array(yxArray)
   x = np.linalg.solve(a, b)
-  print x
+  #print x
   return x
 
+# test
 x = [0.0,0.2,0.5,0.7,1.1,1.5,1.9,2.3,2.8,3.1]
 y = [102.56,113.18,130.11,142.05,167.53,195.14,224.87,256.73,299.50,326.72]
 n = 4
-polyLeastSquares(n,x,y)
+#polyLeastSquares(n,x,y)
 
 # example pg 502
 # x = [0,0.25,0.5,0.75,1]
